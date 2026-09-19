@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FloatChat Ocean Intelligence"
+description = "A cinematic conversational ocean-intelligence experience for exploring Indian Ocean ARGO and BGC-ARGO float data through depth, time, trajectories, and grounded AI answers."
+version = "1.0.0"
+id = "artifacts/floatchat"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23096
+
+[services.development]
+run = "pnpm --filter @workspace/floatchat run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/floatchat", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/floatchat/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23096"
+BASE_PATH = "/"
