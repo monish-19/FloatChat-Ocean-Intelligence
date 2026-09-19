@@ -1,0 +1,1051 @@
+# FLOATCHAT — IMMERSIVE FRONTEND V2
+
+You are redesigning and significantly upgrading the existing FloatChat frontend.
+
+IMPORTANT:
+
+Do NOT replace the existing design with a generic AI-generated website.
+
+Do NOT rebuild the site as a conventional SaaS dashboard.
+
+Do NOT throw away the current visual identity.
+
+The existing FloatChat site already has a strong visual foundation:
+
+* dark deep-ocean aesthetic
+* cyan/teal accents
+* editorial typography
+* scientific HUD elements
+* ARGO float visualization
+* depth-based storytelling
+* "The ocean is the interface"
+* "Scroll is a descent"
+* scientific data presentation
+* minimal navigation
+
+KEEP THESE CORE IDEAS.
+
+The goal is to evolve the existing site from:
+
+"polished interactive presentation"
+
+into:
+
+"immersive cinematic scientific data experience."
+
+The final result should feel like a creative technology studio built it using WebGL, Three.js and advanced motion design.
+
+Use the visual quality and interaction philosophy of high-end experimental websites such as Emotion Agency as inspiration.
+
+Reference:
+
+https://emotion-agency.com/
+
+DO NOT copy its branding, layout, content or assets.
+
+Borrow the principles:
+
+* immersive 3D
+* cinematic transitions
+* scroll-driven storytelling
+* experimental typography
+* strong motion design
+* interactive environments
+* mouse-driven interaction
+* spatial composition
+* seamless scene transitions
+
+FloatChat must remain visually original.
+
+==================================================
+
+1. THE MOST IMPORTANT CHANGE
+   ==================================================
+
+The current website has beautiful static compositions.
+
+Make those compositions feel ALIVE.
+
+The ocean should continuously exist behind the interface.
+
+Instead of:
+
+SECTION → STATIC DESIGN → SECTION → STATIC DESIGN
+
+create:
+
+ONE CONTINUOUS OCEAN WORLD
+
+where the camera, data, typography and interface move through it.
+
+The website should feel like one continuous experience.
+
+The user should feel like they are exploring an actual ocean data environment.
+
+==================================================
+2. OCEAN ENVIRONMENT
+====================
+
+Create a persistent 3D deep-ocean environment.
+
+Use Three.js / React Three Fiber where practical.
+
+The environment should contain:
+
+* subtle volumetric depth
+* floating particles
+* microscopic marine particles
+* faint light rays
+* ARGO floats
+* trajectory curves
+* subtle oceanographic contour fields
+* atmospheric fog
+* depth gradients
+
+The environment must NOT look like a generic 3D ocean animation.
+
+It should look like a scientific visualization.
+
+Think:
+
+"NASA mission control meets deep ocean exploration."
+
+The background should have subtle movement even when the user is not scrolling.
+
+Nothing should feel frozen.
+
+==================================================
+3. HERO — "THE OCEAN IS THE INTERFACE"
+======================================
+
+Keep the existing hero concept.
+
+But make it much more cinematic.
+
+Current concept:
+
+"The ocean is the interface."
+
+Preserve this phrase.
+
+Upgrade it with:
+
+* slow camera movement
+* particles drifting through depth
+* distant ARGO floats
+* subtle trajectory lines
+* atmospheric glow
+* mouse-responsive environment
+
+The large typography should remain extremely clean.
+
+Animate the words individually.
+
+For example:
+
+THE OCEAN
+IS THE
+INTERFACE
+
+Each line should have subtle movement and depth.
+
+Do NOT use a generic fade-in.
+
+Use:
+
+* blur-to-focus
+* vertical displacement
+* opacity
+* slight scale
+* depth/parallax
+
+The animation should be slow and premium.
+
+==================================================
+4. CUSTOM CURSOR
+================
+
+Create a custom cursor for desktop.
+
+Default:
+
+small luminous dot.
+
+Around it:
+
+subtle soft halo.
+
+When moving:
+
+a very subtle trailing effect.
+
+When hovering interactive elements:
+
+expand the cursor.
+
+When hovering an ARGO float:
+
+show:
+
+ARGO FLOAT
+EXPLORE →
+
+When hovering a trajectory:
+
+show:
+
+TRAJECTORY
+
+When hovering the chat:
+
+show:
+
+ASK THE OCEAN
+
+When hovering a navigation link:
+
+show:
+
+OPEN
+
+The cursor should interact with the environment.
+
+Nearby particles should very subtly react to cursor movement.
+
+IMPORTANT:
+
+The cursor must be elegant.
+
+No gimmicky giant circles.
+
+==================================================
+5. MOUSE PARALLAX
+=================
+
+The entire scene should respond subtly to mouse movement.
+
+Create multiple depth layers:
+
+Layer 1:
+foreground particles
+
+Layer 2:
+ARGO objects
+
+Layer 3:
+trajectory lines
+
+Layer 4:
+ocean atmosphere
+
+Layer 5:
+background stars/particles
+
+Each layer moves at a different rate.
+
+This should create real depth.
+
+The movement should be extremely subtle.
+
+==================================================
+6. SCROLL = DESCENT
+===================
+
+KEEP THIS CONCEPT.
+
+Scrolling represents physically descending into the ocean.
+
+At the top:
+
+SURFACE
+000M
+
+As the user scrolls:
+
+100M
+250M
+500M
+750M
+1000M
+
+The camera should move downward through the 3D environment.
+
+The lighting should gradually change.
+
+At greater depth:
+
+* less light
+* darker blue
+* denser particles
+* more scientific instrumentation
+* more ARGO data
+
+The depth indicator should remain visible as a small HUD.
+
+Example:
+
+DEPTH
+742M
+
+The number should smoothly interpolate.
+
+Do NOT simply change the text.
+
+The entire environment should respond to depth.
+
+==================================================
+7. FLOAT TRAJECTORIES
+=====================
+
+This is one of the most important visual elements.
+
+ARGO floats should move through the environment.
+
+Each float should have:
+
+* glowing point
+* tiny identifier
+* trajectory
+* depth
+* timestamp
+
+Trajectory lines should have subtle animated motion.
+
+Use flowing particles traveling along trajectories.
+
+This makes the trajectories feel alive.
+
+Example:
+
+A float moves from:
+
+Arabian Sea
+↓
+Indian Ocean
+↓
+Bay of Bengal
+
+The trajectory remains visible behind it.
+
+On hover:
+
+the trajectory brightens.
+
+On click:
+
+camera smoothly moves toward that float.
+
+Then display a scientific HUD.
+
+==================================================
+8. FLOAT DETAIL HUD
+===================
+
+When the user selects a float:
+
+Do not open a conventional modal.
+
+Instead:
+
+dim the environment slightly.
+
+Camera moves toward the float.
+
+A HUD appears next to it.
+
+Example:
+
+ARGO-4902147
+
+POSITION
+08.421° N
+72.183° E
+
+DEPTH
+742 M
+
+TEMPERATURE
+27.42 °C
+
+SALINITY
+35.61 PSU
+
+LAST UPDATE
+18:42 UTC
+
+The information should appear piece by piece.
+
+Use scientific instrumentation styling.
+
+The user should feel like they are examining an actual instrument.
+
+==================================================
+9. DATA SHOULD ANIMATE
+======================
+
+Do not show static numbers.
+
+Scientific values should animate subtly.
+
+Examples:
+
+27.42°C
+
+should count smoothly when the value changes.
+
+742M
+
+should interpolate.
+
+Coordinates should update smoothly.
+
+Coverage values should animate.
+
+The interface should feel live.
+
+==================================================
+10. RETRIEVAL PIPELINE
+======================
+
+Keep the existing retrieval architecture.
+
+Show:
+
+SEMANTIC
+↓
+SQL
+↓
+GROUNDED LLM
+
+But make it feel like a real system operating.
+
+When the user asks a question:
+
+INTERPRETING QUERY
+
+then:
+
+SEMANTIC RETRIEVAL
+
+then:
+
+SPATIAL FILTER
+
+then:
+
+TEMPORAL FILTER
+
+then:
+
+ARGO OBSERVATIONS
+
+then:
+
+GROUNDED ANSWER
+
+Each stage should activate sequentially.
+
+Use subtle progress indicators.
+
+Do not make this look like a loading spinner.
+
+Make it look like an actual data pipeline.
+
+==================================================
+11. THE CHAT EXPERIENCE
+=======================
+
+The chat should feel like an interface embedded into the ocean.
+
+Not:
+
+white chatbot panel.
+
+Not:
+
+ChatGPT clone.
+
+Use a translucent dark HUD.
+
+Example:
+
+ASK THE OCEAN
+
+[ Where is the Arabian Sea warmest right now? ]
+
+SEND →
+
+When the user asks something:
+
+the environment should respond.
+
+The camera can move toward the relevant region.
+
+Relevant ARGO floats illuminate.
+
+The anomaly field appears.
+
+Then the answer appears.
+
+This connection between:
+
+QUESTION → DATA → ENVIRONMENT → ANSWER
+
+is essential.
+
+==================================================
+12. ANSWER EXPERIENCE
+=====================
+
+For example:
+
+USER:
+
+Where is the Arabian Sea warmest right now?
+
+The system should:
+
+1. Interpret the question.
+2. Show retrieval stages.
+3. Identify relevant region.
+4. Highlight relevant floats.
+5. Move camera toward region.
+6. Show thermal visualization.
+7. Display grounded answer.
+
+Example HUD:
+
+ARABIAN SEA
+
+THERMAL MAXIMUM
+
+29.4°C
+
+08.7°N
+67.3°E
+
+7 ARGO FLOATS
+
+OBSERVED
+18:42 UTC
+
+The answer should feel like the environment discovered it.
+
+==================================================
+13. ANOMALY VISUALIZATION
+=========================
+
+Create a visual representation for anomalies.
+
+Temperature anomaly:
+
+cyan → neutral → amber
+
+Salinity:
+
+blue intensity
+
+Oxygen:
+
+different subtle visual field
+
+Do not use giant colorful heatmaps.
+
+Use elegant glowing regions / volumetric fields.
+
+The anomaly should appear spatially within the ocean.
+
+==================================================
+14. KNOWLEDGE GRAPH
+===================
+
+Keep the existing knowledge graph concept.
+
+But make it 3D.
+
+Nodes:
+
+FLOAT
+
+REGION
+
+ANOMALY
+
+TEMPERATURE
+
+TIME
+
+TRAJECTORY
+
+Edges:
+
+subtle glowing lines.
+
+When a complex question is asked:
+
+"Find floats with a similar anomaly pattern near this region."
+
+The knowledge graph should dynamically build itself.
+
+Nodes appear.
+
+Connections draw themselves.
+
+Camera subtly moves through the graph.
+
+Then relevant floats become highlighted in the ocean.
+
+This creates the feeling of:
+
+AI REASONING THROUGH OCEAN DATA.
+
+==================================================
+15. 4D TIME SYSTEM
+==================
+
+TIME is a major part of FloatChat.
+
+Create a cinematic temporal controller.
+
+Instead of a standard slider:
+
+create a scientific timeline HUD.
+
+Example:
+
+2024 ───────── 2025 ───────── 2026
+●
+JUN 18
+
+When dragging:
+
+ARGO trajectories update.
+
+Float positions interpolate.
+
+Anomalies change.
+
+Observation points update.
+
+The transition must be smooth.
+
+TIME should feel like another dimension of the environment.
+
+==================================================
+16. INDIAN OCEAN
+================
+
+The 3D environment should subtly represent the Indian Ocean.
+
+Recognizable regions:
+
+Arabian Sea
+Bay of Bengal
+Indian Ocean
+Andaman Sea
+Lakshadweep
+Sri Lanka
+India
+East Africa
+Indonesia
+
+Use minimal geographic outlines.
+
+Do not make this look like Google Maps.
+
+It should feel like a scientific spatial model.
+
+==================================================
+17. TYPOGRAPHY
+==============
+
+Keep the existing editorial typography style.
+
+Make typography one of the main visual elements.
+
+Use extremely large text in selected moments.
+
+Examples:
+
+THE OCEAN
+IS ALWAYS
+MOVING.
+
+Then:
+
+EVERY DOT
+IS AN
+INSTRUMENT.
+
+Then:
+
+A FLOAT
+IS NEVER
+JUST A FLOAT.
+
+Typography should interact with the environment.
+
+For example:
+
+letters can move slightly with scroll.
+
+Text can reveal from depth.
+
+Words can move horizontally.
+
+But keep it elegant.
+
+==================================================
+18. SECTION TRANSITIONS
+=======================
+
+Eliminate hard section boundaries.
+
+Transitions should be continuous.
+
+Possible transitions:
+
+camera zoom
+camera descent
+horizontal movement
+depth blur
+scale
+particle transition
+trajectory transition
+typography transformation
+
+Example:
+
+"EVERY DOT IS AN INSTRUMENT"
+
+The dots behind the text gradually become ARGO floats.
+
+Then the floats form trajectories.
+
+Those trajectories become the visualization.
+
+Then the visualization becomes the chat interface.
+
+This is the level of continuity we want.
+
+==================================================
+19. LOADING EXPERIENCE
+======================
+
+Create a short cinematic initialization.
+
+Example:
+
+FLOATCHAT
+
+INITIALIZING OCEAN FIELD
+LOADING FLOAT NETWORK
+CALIBRATING DEPTH
+INDEXING OBSERVATIONS
+CONNECTING INTELLIGENCE
+
+SYSTEM READY
+
+Then transition into the ocean.
+
+Keep this under a reasonable duration.
+
+Do not make users wait unnecessarily.
+
+==================================================
+20. NAVIGATION
+==============
+
+Keep the minimal top navigation.
+
+FLOATCHAT
+
+EXPLORE
+DATA
+INTELLIGENCE
+ABOUT
+
+But make navigation itself interactive.
+
+Hover:
+
+small animated underline.
+
+Active state:
+
+tiny cyan indicator.
+
+Click:
+
+smooth scene transition.
+
+Mobile navigation:
+
+full-screen cinematic overlay.
+
+==================================================
+21. MICRO-INTERACTIONS
+======================
+
+Add carefully designed micro-interactions.
+
+Buttons:
+
+magnetic movement
+
+Hover:
+
+subtle glow
+
+Arrow:
+
+moves slightly
+
+Data:
+
+numbers interpolate
+
+Float:
+
+reacts to cursor
+
+Trajectory:
+
+brightens on hover
+
+Chat:
+
+input expands slightly when active
+
+Timeline:
+
+dragging has inertia
+
+Cards:
+
+subtle 3D tilt
+
+Do not over-animate.
+
+Motion must have purpose.
+
+==================================================
+22. MOTION PRINCIPLES
+=====================
+
+Use GSAP / Framer Motion / React Three Fiber as appropriate.
+
+Animation should follow these principles:
+
+DEPTH → scroll
+
+TIME → timeline
+
+DATA → trajectories
+
+QUESTION → camera movement
+
+AI → retrieval animation
+
+RELATIONSHIP → knowledge graph
+
+UNCERTAINTY → coverage visualization
+
+ANSWER → environmental response
+
+Every animation should communicate something.
+
+==================================================
+23. CURRENT DESIGN MUST REMAIN RECOGNIZABLE
+===========================================
+
+IMPORTANT:
+
+Do not completely redesign the visual identity.
+
+The existing site already has:
+
+* dark teal ocean palette
+* large editorial headlines
+* thin scientific borders
+* minimal HUD
+* clean layouts
+* scientific diagrams
+* ARGO visualization
+
+Preserve these.
+
+Upgrade them.
+
+Think:
+
+FloatChat V1
+→
+FloatChat V2: Immersive Edition
+
+Not:
+
+FloatChat
+→ completely unrelated website.
+
+==================================================
+24. PERFORMANCE
+===============
+
+This must remain a functional website.
+
+Do not sacrifice usability for visuals.
+
+Implement:
+
+* lazy-loaded 3D
+* reduced particle count on mobile
+* adaptive rendering
+* requestAnimationFrame optimization
+* GPU-friendly effects
+* reduced motion support
+* fallback for devices without WebGL
+
+Desktop gets the full experience.
+
+Mobile gets a simplified but still beautiful experience.
+
+==================================================
+25. RESPONSIVE EXPERIENCE
+=========================
+
+Desktop:
+
+full immersive 3D.
+
+Tablet:
+
+reduced environment.
+
+Mobile:
+
+simplified 3D + strong typography + essential interactions.
+
+Do not simply scale the desktop layout down.
+
+Design responsive behavior intentionally.
+
+==================================================
+26. REALISTIC MOCK DATA
+=======================
+
+For the prototype use realistic mock data.
+
+Create:
+
+ARGO floats
+coordinates
+depth
+temperature
+salinity
+oxygen
+timestamps
+trajectories
+anomalies
+retrieval states
+knowledge graph relationships
+
+Structure the data cleanly so the backend can later replace it.
+
+Do NOT invent fake scientific claims that appear to be real-world measurements.
+
+Clearly treat prototype values as demonstration data where appropriate.
+
+==================================================
+27. FINAL SECTION
+=================
+
+End the experience by returning to a calm ocean scene.
+
+Large typography:
+
+ASK THE OCEAN.
+
+Then:
+
+LET THE DATA ANSWER.
+
+Button:
+
+ENTER FLOATCHAT →
+
+The final scene should be visually quiet.
+
+The user should feel like they completed a journey.
+
+==================================================
+28. QUALITY TEST
+================
+
+Before finishing, evaluate the implementation against these questions:
+
+1. Does it feel like a normal AI-generated website?
+
+If yes → redesign.
+
+2. Does it look like a SaaS dashboard?
+
+If yes → redesign.
+
+3. Does the ocean feel alive?
+
+If no → improve the environment.
+
+4. Does scrolling actually feel like descending?
+
+If no → improve camera movement.
+
+5. Does the 3D visualization feel connected to the UI?
+
+If no → integrate them.
+
+6. Does the user's question affect the visual environment?
+
+If no → improve the query experience.
+
+7. Does time feel like a dimension?
+
+If no → improve the timeline.
+
+8. Does the knowledge graph feel like actual reasoning?
+
+If no → improve its animation.
+
+9. Does the website have a memorable WOW moment?
+
+If no → create one.
+
+10. Does it look like someone intentionally designed and engineered every interaction?
+
+If no → refine it.
+
+FINAL TARGET:
+
+The website should feel like:
+
+AN OCEANOGRAPHIC RESEARCH INSTRUMENT
+
+*
+
+A CINEMATIC 3D EXPERIENCE
+
+*
+
+AN AI RESEARCH ASSISTANT
+
+*
+
+A 4D DATA EXPLORATION PLATFORM
+
+It should NOT feel like:
+
+AN AI WEBSITE BUILDER TEMPLATE.
+
+Prioritize visual quality, interaction quality, motion design, 3D depth, storytelling and scientific visualization.
+
+Make the frontend the strongest part of the FloatChat project.
