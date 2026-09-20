@@ -21,6 +21,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import { ObservationLab } from '@/components/observation-lab';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
@@ -126,8 +127,8 @@ const particles = Array.from({ length: 52 }, (_, index) => ({
 
 function useReveal() {
   return {
-    initial: { opacity: 0, y: 24, filter: 'blur(8px)' },
-    whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.18 },
     transition: { duration: 0.8, ease: 'easeOut' as const },
   };
@@ -164,6 +165,15 @@ function Home() {
     updateDepth();
     window.addEventListener('scroll', updateDepth, { passive: true });
     return () => window.removeEventListener('scroll', updateDepth);
+  }, []);
+
+  useEffect(() => {
+    const targetId = window.location.hash.slice(1);
+    if (!targetId) return;
+    const timer = window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ block: 'start' });
+    }, 80);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -309,6 +319,7 @@ function Home() {
         <div className="nav-links">
           <a href="#descent">Descent</a>
           <a href="#atlas">Float field</a>
+          <a href="#observations">4D lab</a>
           <a href="#chat">Ask the ocean</a>
         </div>
         <div className="nav-live">
@@ -466,6 +477,8 @@ function Home() {
           <div className="network-legend"><span><i className="legend-dot" /> transmitting</span><span><i className="legend-dot orange" /> selected</span><span>prototype values</span></div>
         </div>
       </motion.section>
+
+      <ObservationLab />
 
       <motion.section className="flow-section chat-section" id="chat" {...reveal}>
         <div className="section-kicker">03 / ask the ocean</div>

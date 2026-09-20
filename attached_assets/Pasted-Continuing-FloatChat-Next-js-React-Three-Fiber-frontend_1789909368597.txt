@@ -1,0 +1,36 @@
+Continuing FloatChat (Next.js + React Three Fiber frontend, FastAPI + Postgres + Neo4j
+backend). Before any new work, AUDIT current state against these 5 items — don't trust
+prior chat/PR summaries, verify against the running app and actual code:
+
+1. Does the R3F OceanScene render actual ARGO float positions/trajectories moving
+   through space+depth+time (the literal "4D WebGL Trajectory Renderer" requirement),
+   or is it currently only decorative (ambient particles/caustics)? If only decorative,
+   this is the highest-priority fix: plot real float lat/lon/depth from /api/floats as
+   points, add a time-scrub control that animates them. Don't skip this even if it
+   feels done — check with real data on screen, not just that WebGL is present.
+
+2. Does /api/transect have a frontend view that actually renders a depth-vs-
+   temperature/salinity cross-section chart (thermocline visibility), or does the
+   endpoint exist without a UI consumer? If missing, add a simple line/area chart view.
+
+3. Run the latency benchmark for real: `python scripts/benchmark.py --runs 60` then
+   `python scripts/generate_architecture.py`. Confirm this produces an actual
+   annotated diagram/output with real p50/p95 numbers (not placeholder). Save that
+   output — I need the real numbers for the PPT.
+
+4. Does /api/anomalies surface anything duration-based ("heatwave" = sustained
+   anomaly over time), or only point-in-time z-score spikes? If only point-in-time,
+   add a simple duration aggregation on top of existing detection (e.g. flag when
+   z-score exceeds threshold for N consecutive readings) — don't rebuild detection,
+   extend it.
+
+5. Take clean screenshots (browser tool) of: the landing/descent UI, the WebGL
+   trajectory view in action, the transect/depth-profile chart, and the anomalies
+   view — these go straight into the PPT (slides 2, 3/5, and supporting visuals).
+
+Report the audit as a status table (item → done/partial/missing) before touching
+code. Fix items in priority order 1 → 2 → 3 → 4, verifying each with a screenshot
+before moving to the next. Item 5 (screenshots) happens last, once 1-4 are real.
+
+Don't touch anything about the semantic/SQL/graph/LLM routing logic itself — it's
+working and out of scope for this pass.

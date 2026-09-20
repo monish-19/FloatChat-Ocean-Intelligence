@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-09-20T13:10:48Z",
+  "baseUrl": "http://127.0.0.1:8080",
+  "runs": 60,
+  "successfulRequests": 60,
+  "aggregate": {
+    "p50Ms": 1.006,
+    "p95Ms": 1.957,
+    "meanMs": 1.647,
+    "minMs": 0.76,
+    "maxMs": 28.961
+  },
+  "endpoints": {
+    "floats": {
+      "path": "/api/floats",
+      "runs": 20,
+      "p50Ms": 1.004,
+      "p95Ms": 1.957,
+      "meanMs": 2.467,
+      "statusCodes": [
+        200
+      ],
+      "averageBytes": 3934
+    },
+    "transect": {
+      "path": "/api/transect?floatId=WMO%202902746",
+      "runs": 20,
+      "p50Ms": 1.018,
+      "p95Ms": 1.247,
+      "meanMs": 1.109,
+      "statusCodes": [
+        200
+      ],
+      "averageBytes": 628
+    },
+    "anomalies": {
+      "path": "/api/anomalies",
+      "runs": 20,
+      "p50Ms": 1.006,
+      "p95Ms": 1.463,
+      "meanMs": 1.365,
+      "statusCodes": [
+        200
+      ],
+      "averageBytes": 337
+    }
+  }
+}
